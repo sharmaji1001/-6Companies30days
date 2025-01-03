@@ -1,0 +1,59 @@
+Quesiton 1) https://leetcode.com/problems/count-number-of-nice-subarrays/submissions/1496548646
+
+class Solution {
+public:
+    int numberOfSubarrays(vector<int>& nums, int k) {
+    int count = 0, oddCount = 0, prefix = 0;
+    int start = 0;
+    for (int end = 0; end < nums.size(); ++end) {
+        if (nums[end] % 2 == 1) {
+            oddCount++;
+            prefix = 0; // Reset prefix count
+        }
+        while (oddCount == k) {
+            if (nums[start] % 2 == 1) {
+                oddCount--;
+            }
+            prefix++;
+            start++;
+        }
+        count += prefix;
+    }
+    return count;
+}
+
+};
+
+Note-> learnt how to implement sliding window
+
+Quesiton 2)https://leetcode.com/problems/repeated-dna-sequences/submissions/1496544278
+
+class Solution {
+public:
+    vector<string> findRepeatedDnaSequences(string s) {
+        // Result vector to store repeated sequences
+        vector<string> result;
+        if (s.length() < 10) return result; // Edge case
+        
+        unordered_map<string, int> substringCount; // Hash table for substrings
+        
+        // Traverse the string with a sliding window of size 10
+        for (int i = 0; i <= s.length() - 10; ++i) {
+            string substring = s.substr(i, 10); // Extract substring of length 10
+            substringCount[substring]++; // Increment its count in the hash table
+        }
+        
+        // Collect all substrings with count > 1
+        for (const auto& entry : substringCount) {
+            if (entry.second > 1) {
+                result.push_back(entry.first);
+            }
+        }
+        
+        return result;
+    }
+};
+
+Note-> Substring question, used GPT, was stunned to look at the soluiton, it was such a basic approach, i skipped a minute detail, 
+
+thank you
