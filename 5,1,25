@@ -1,0 +1,42 @@
+Question 1)https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/submissions/1498772973
+
+you can access code, through the link.
+
+Question 2)https://leetcode.com/problems/wiggle-sort-ii/submissions/1498785694
+
+Approach
+Steps
+Find the Median:
+
+Use a quickselect or sort to find the median of the array.
+Three-Way Partitioning:
+
+Rearrange the array such that:
+Elements 
+>
+> median are in one part.
+Elements 
+=
+= median are in another part.
+Elements 
+<
+< median are in the last part.
+This step groups elements effectively for wiggle placement.
+Place Elements Using Virtual Index Mapping:
+
+Assign elements from the smaller half to even indices.
+Assign elements from the larger half to odd indices
+
+Question 3)https://leetcode.com/problems/shopping-offers/submissions/1498797864
+
+Algorithm
+Input:
+price: An array where price[i] is the price of the 𝑖𝑡ℎ item.
+special: A list of special offers where each offer is an array. The first 𝑛 elements specify the number of items, and the last element is the total cost of the offer.
+needs: An array specifying the required number of each item.
+Output:
+The minimum cost to satisfy the needs.
+
+
+Thank you.
+
