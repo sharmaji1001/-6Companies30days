@@ -1,0 +1,21 @@
+Question 1)https://leetcode.com/problems/minimum-cost-to-convert-string-i/submissions/1499767451
+
+NOTE->Floyd warshal algorithm, understood, need to practice more, 
+
+Quesiton 2)https://leetcode.com/problems/longest-mountain-in-array/submissions/1499845273
+
+NOTE-
+>Algorithm
+Initialize a variable maxLength = 0 to store the length of the longest mountain.
+Traverse the array from index 1 to 
+𝑛
+−
+2
+n−2 (because a peak requires elements on both sides).
+For each peak found:
+Expand left until the sequence stops increasing.
+Expand right until the sequence stops decreasing.
+Update maxLength with the calculated mountain length.
+Return maxLength.
+
+THANK YOU
