@@ -1,0 +1,50 @@
+Question 1)https://leetcode.com/problems/serialize-and-deserialize-binary-tree/submissions/1503269963
+
+Algorithm for serialize(TreeNode* root) (Encoding):
+Base case: If the tree is empty (root is NULL), return an empty string.
+Initialize an empty string s to store the serialized data.
+Initialize a queue q for level-order traversal.
+Push the root node into the queue.
+While the queue is not empty:
+Pop the front node from the queue.
+If the node is NULL, append "#," to s.
+If the node is not NULL, append the node's value followed by a comma to s.
+Push the left and right children of the node (whether NULL or not) into the queue.
+Return the string s.
+
+Algorithm for deserialize(string data) (Decoding):
+Base case: If the data string is empty, return NULL (tree is empty).
+Initialize a stringstream with the input string data.
+Split the string by commas to process each node.
+Create the root node from the first value.
+Initialize a queue q and push the root node into the queue.
+While the queue is not empty:
+Pop a node from the queue.
+Read the next value from the string:
+If the value is "#", set the left child of the node to NULL.
+If the value is not "#", create a new left child node and push it to the queue.
+Read the next value for the right child and repeat the process similarly.
+Return the root node after processing all nodes.
+
+Question 2)https://www.geeksforgeeks.org/problems/nuts-and-bolts-problem0431/1
+
+map<char,char> mp;
+        mp['!']='0';
+        mp['#']='1';
+        mp['$']='2';
+        mp['%']='3';
+        mp['&']='4';
+        mp['*']='5';
+        mp['?']='6';
+        mp['@']='7';
+        mp['^']='8';
+        sort(nuts,nuts+n,[&mp](char a,char b){
+            return mp[a]<mp[b];
+        });
+        sort(bolts,bolts+n,[&mp](char a,char b){
+            return mp[a]<mp[b];
+        });
+
+Note:- preety straight forward.
+
+Thank you 
