@@ -1,0 +1,26 @@
+Question 1)https://leetcode.com/problems/rotting-oranges/submissions/1505275253
+
+Note :- 
+Algorithm
+Initialization:
+
+Traverse the grid.
+Count the number of fresh oranges.
+Push all rotten oranges into a queue.
+BFS Implementation:
+
+Use a queue to store (x, y) coordinates of rotten oranges.
+For each minute (level in BFS), process all rotten oranges in the queue:
+Check all 4 adjacent cells.
+If the adjacent cell contains a fresh orange, rot it, push it to the queue, and decrease the fresh orange count.
+Keep track of minutes elapsed.
+Return the Result:
+
+If any fresh oranges remain, return -1.
+Otherwise, return the minutes elapsed.
+
+Question 2)https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/submissions/1505309842
+Note:- somewhat simsilar to the first one
+
+
+thank you
