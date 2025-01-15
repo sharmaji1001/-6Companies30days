@@ -1,0 +1,37 @@
+Question 1)https://leetcode.com/problems/battleships-in-a-board/submissions/1509624184
+
+Note:-
+Algorithm
+Initialize a counter for battleships.
+Iterate through every cell in the board:
+If the cell contains 'X':
+Check if it's the first cell of a battleship:
+No 'X' to its left (if it's not in the first column).
+No 'X' above it (if it's not in the first row).
+If both conditions are true, increment the counter.
+Return the counter.
+
+Question 2)https://leetcode.com/problems/sort-characters-by-frequency/submissions/1509631089
+
+Note:- 
+Approach
+Frequency Count:
+
+First, calculate the frequency of each character in the string. Use a hash map or frequency array for this purpose.
+Since there are at most 62 possible characters (26 lowercase, 26 uppercase, 10 digits), the space complexity for storing frequencies is manageable.
+Bucket Sort by Frequency:
+
+Use a bucket array where the index represents the frequency, and each bucket contains a list of characters with that frequency.
+For example, all characters that occur twice are stored in bucket index 2.
+Build Result String:
+
+Iterate through the bucket array in reverse order (highest frequency to lowest) and construct the result string by appending the characters repeated by their frequency.
+
+Question 3)https://leetcode.com/problems/word-break/submissions/1509637262
+
+Note:-String Splitting Problems:
+Where substrings need to be checked against a dictionary.
+Multiple Valid Subproblems:
+If the problem can be broken into overlapping subproblems (e.g., can s[0:j] be segmented?).
+
+Thank you------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
